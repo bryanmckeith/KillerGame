@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="fr" xmlns="http://www.w3.org/1999/xhtml" prefix="og: http://ogp.me/ns#">
+
+    <head>
+
+        <title>Killer Game</title>
+
+        {% load static %}
+
+        <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="{% static 'myapp/css/subscription.css' %}" />
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0,minimum-scale=1.0">
+
+    </head>
+
+    {% if envoi %}
+        Votre inscription a bien &eacute;t&eacute; enregistr&eacute;e !
+    {% endif %}
+
+    <body>
+
+        <div id="notasmartphone">
+            <header>
+                <img id="KillerGame" src="{% static 'myapp/img/KillerGame.svg' %}" alt="KillerGame">
+            </header>
+
+            <div class="container">
+                <div class="top_part">
+                    <img src="{% static 'myapp/img/top-part-blood.svg' %}" alt="top-part-blood" />
+                </div>
+                <div class="medium_part_column">
+                    <div id="desktop">
+                        <p>S&eacute;rieusement ?</p>
+                        <img id="whatsApp" src="{% static 'myapp/img/whatsapp-logo-variant.svg' %}" alt="whatsapp-logo-variant">
+                        <p>Ce jeu se joue sur mobile, passez au responsive !</p>
+                    </div>
+                    <div id="paysage">
+                        <p>Oups...</p>
+                        <img id="rotate" src="{% static 'myapp/img/rotate-screen.svg' %}" alt="rotate-screen">
+                        <p>&Ccedil;a marche beaucoup mieux dans l'autre sens !</p>
+                    </div>
+                </div>
+                <div class="bottom_part">
+                    <img src="{% static 'myapp/img/bottom_part_blood.svg' %}" alt="bottom_part_blood" />
+                </div>
+
+            </div>
+        </div>
+
+        <div id="smartphone">
+
+            <header>
+                <img id="KillerGame" src="{% static 'myapp/img/KillerGame.svg' %}" alt="KillerGame">
+            </header>
+
+            <div class="container">
+
+                <div class="top_part">
+                    <img src="{% static 'myapp/img/pool-of-blood.svg' %}" alt="pool-of-blood" />
+                </div>
+
+                <div class="medium_part_column">
+
+                    <div class="intro">
+                        <div class="intro_title">
+                            Inscription
+                        </div>
+                        <div class="intro_text">
+                            <div id="text1">Bienvenue dans Killer Game.</div>
+                            <div id="text2">Inscrivez-vous pour commencer &agrave; jouer et recevoir votre premier contrat.</div>
+                        </div>
+                    </div>
+
+                    <div class="formWrap">
+                        <form action="{% url "Subscription Page" %}" method="post">
+                            {% csrf_token %}
+                            {{ form.as_p }}
+
+                            <button>
+                                S'inscrire
+                            </button>
+                        </form>
+                    </div>
+
+                </div>
+            </div>
+
+            <footer>
+                    <div class="to_homepage" onclick="self.location.href='home.html'">
+                        <div class="icone1">
+                            <img src="{% static 'myapp/img/picto-home-white.svg' %}" alt="picto-home-white" />
+                        </div>
+                        ACCUEIL
+                    </div>
+                    <div class="to_rulespage" onclick="self.location.href='rules.html'">
+                        <div class="icone2">
+                            <img src="{% static 'myapp/img/picto-rules.svg' %}" alt="picto-rules" />
+                        </div>
+                        REGLES
+                    </div>
+                    <div class="to_ranking" onclick="self.location.href='ranking.html'">
+                        <div class="icone3">
+                            <img src="{% static 'myapp/img/picto-ranking.svg' %}" alt="picto-ranking" />
+                        </div>
+                        CLASSEMENT
+                    </div>
+            </footer>
+
+        </div>
+
+    </body>
+</html>

@@ -1,0 +1,136 @@
+/* ____________________ CSS Document ____________________ */
+
+/* ==================== For Desktop ==================== */
+
+    /* ____________________ Body + Header ____________________ */
+
+    body {
+        background-color: #000000;
+        font-family: 'Source Sans Pro', sans-serif;
+    }
+
+    #KillerGame {
+        width: 100%;
+        height: 56px;
+        align-self: center;
+        padding-top: 20px;
+        -webkit-margin-after: 30px;
+    }
+
+    #noplayer {
+        width: 100%;
+        color: #ffe100;
+        text-align: center;
+    }
+
+    .top_part {
+           position: absolute;
+            left: 0;
+            top: 0;
+        }
+
+    .bottom_part {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+        }
+
+    p {
+        color: white;
+        text-align: center;
+        font-size: 25px;
+    }
+
+    /* ____________________ TOP Killers ____________________ */
+
+    #top3, #top10, #top20, #top50 {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+
+    .top3_Killer, .top10_Killer, .top20_Killer, .top50_Killer {
+        flex-grow:1;
+        text-align: center;
+        justify-content: center;
+    }
+
+        .top3_Killer:nth-child(1) {
+            order: 2;
+            height: 100px;
+        }
+        .top3_Killer:nth-child(2) {
+            order: 1;
+            height: 75px;
+        }
+        .top3_Killer:nth-child(3) {
+            order: 3;
+            height: 50px;
+        }
+
+    .top3_playerName {
+        color: #ffe100;
+    }
+
+    .top3_playerPoints {
+        color : #ffffff;
+    }
+
+            .top3_Killer:nth-child(1):after {
+                content: '';
+                height: 18px;
+                width: 14px;
+                position: relative;
+                left: 25%;
+                top: -35px;
+                display: block;
+                margin-bottom: -18px;
+                background-image: url('/static/picto-classement.svg');
+            }
+
+            .top3_Killer:nth-child(2):after {
+                content: '';
+                height: 18px;
+                width: 14px;
+                position: relative;
+                left: 25%;
+                top: -35px;
+                display: block;
+                margin-bottom: -18px;
+                background-image: url('/static/picto-classement-argent.svg');
+            }
+
+            .top3_Killer:nth-child(3):after {
+                content: '';
+                height: 18px;
+                width: 14px;
+                position: relative;
+                left: 25%;
+                top: -35px;
+                display: block;
+                margin-bottom: -18px;
+                background-image: url('/static/picto-classement-bronze.svg');
+            }
+
+    .player {
+            padding-left: 12px;
+        }
+
+            .playerName {
+                color: #ffe100;
+            }
+
+            .playerPoints {
+                color : #ffffff;
+            }
+
+            .alive, .killed {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                margin-left: 25px;
+                margin-bottom: 20px;
+                margin-top: 20px;
+            }

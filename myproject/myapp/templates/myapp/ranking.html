@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="fr" xmlns="http://www.w3.org/1999/xhtml" prefix="og: http://ogp.me/ns#">
+
+    <head>
+
+        <title>Killer Game</title>
+
+        {% load static %}
+
+        <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="{% static 'myapp/css/ranking.css' %}" />
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0,minimum-scale=1.0">
+
+    </head>
+
+    <body>
+
+        <div id="notasmartphone">
+            <header>
+                <img id="KillerGame" src="{% static 'myapp/img/KillerGame.svg' %}" alt="KillerGame">
+            </header>
+
+            <div class="container">
+                <div class="top_part">
+                    <img src="{% static 'myapp/img/top-part-blood.svg' %}" alt="top-part-blood" />
+                </div>
+                <div class="medium_part_column">
+                    <div id="desktop">
+                        <p>S&eacute;rieusement ?</p>
+                        <img id="whatsApp" src="{% static 'myapp/img/whatsapp-logo-variant.svg' %}" alt="whatsapp-logo-variant">
+                        <p>Ce jeu se joue sur mobile, passez au responsive !</p>
+                    </div>
+                    <div id="paysage">
+                        <p>Oups...</p>
+                        <img id="rotate" src="{% static 'myapp/img/rotate-screen.svg' %}" alt="rotate-screen">
+                        <p>&Ccedil;a marche beaucoup mieux dans l'autre sens !</p>
+                    </div>
+                </div>
+                <div class="bottom_part">
+                    <img src="{% static 'myapp/img/bottom_part_blood.svg' %}" alt="bottom_part_blood" />
+                </div>
+
+            </div>
+        </div>
+
+        <div id="smartphone">
+
+            <header>
+                <img id="KillerGame" src="{% static 'myapp/img/KillerGame.svg' %}" alt="KillerGame">
+            </header>
+
+            <div class="killerList">
+                {% for player in ranked_players %}
+
+                    <div class="killer">
+                        {% if player.state == "alive" %}
+                            <div class="alive">
+                                <div class="avatar_alive">
+                                    <img id="stillAlive" src="{% static 'myapp/img/avatar.svg' %}" alt="avatar" />
+                                </div>
+                                <div class="player">
+                                    <div class="playerName">{{ player.first_name }} {{ player.name }}</div>
+                                    <div class="playerPoints">{{ player.points }} points</div>
+                                </div>
+                            </div>
+                        {% else %}
+                            <div class="killed">
+                                <div class="avatar_dead">
+                                    <img id="dead" src="{% static 'myapp/img/avatar-dead.svg' %}" alt="avatar-dead" />
+                                </div>
+                                <div class="player">
+                                    <div class="playerName">{{ player.first_name }} {{ player.name }}</div>
+                                    <div class="playerPoints">{{ player.points }} points (&eacute;limin&eacute;-e)</div>
+                                </div>
+                            </div>
+                        {% endif %}
+                    </div>
+
+                {% empty %}
+                    <p>Aucun utilisateur</p>
+                {% endfor %}
+            </div>
+
+            <footer>
+                    <div class="to_homepage" onclick="self.location.href='home.html'">
+                        <div class="icone1">
+                            <img src="{% static 'myapp/img/picto-home.svg' %}" alt="picto-home" />
+                        </div>
+                        ACCUEIL
+                    </div>
+                    <div class="to_rulespage" onclick="self.location.href='rules.html'">
+                        <div class="icone2">
+                            <img src="{% static 'myapp/img/picto-rules.svg' %}" alt="picto-rules" />
+                        </div>
+                        REGLES
+                    </div>
+                    <div class="to_ranking" onclick="self.location.href='ranking.html'">
+                        <div class="icone3">
+                            <img src="{% static 'myapp/img/picto-ranking-white.svg' %}" alt="picto-ranking-white" />
+                        </div>
+                        CLASSEMENT
+                    </div>
+            </footer>
+
+        </div>
+
+    </body>
+</html>

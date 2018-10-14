@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="fr" xmlns="http://www.w3.org/1999/xhtml" prefix="og: http://ogp.me/ns#">
+
+    <head>
+
+        <title>Killer Game</title>
+
+        {% load static %}
+
+        <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="{% static 'myapp/css/welcome.css' %}" />
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0,minimum-scale=1.0">
+
+    </head>
+
+    <body>
+
+        <div class="close_it_on_top" onclick="self.location.href='home.html'">
+            <div class="close">
+                <img src="{% static 'myapp/img/close.svg' %}" alt="close" />
+            </div>
+        </div>
+
+        <div class="container">
+
+            <div class="pin">
+                <img src="{% static 'myapp/img/picto-ranked-player-white.svg' %}" alt="picto-ranked-player-white" />
+            </div>
+
+            <div class="welcome_text">
+                <div id="bravo">Bravo {{ prenom }}!</div>
+                <div id="subscription">Votre inscription est valid&eacute;e</div>
+                <div id="whats_next">Vous allez bient&ocirc;t recevoir un SMS de confirmation. Soyez patient-e avant le d&eacute;but de la partie et n'h&eacute;sitez pas &agrave; lire les r&egrave;gles du jeu :)</div>
+            </div>
+
+            <button class="close_button" onclick="self.location.href='home.html'">
+                Fermer
+            </button>
+
+        </div>
+
+    </body>
+</html>

@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="fr" xmlns="http://www.w3.org/1999/xhtml" prefix="og: http://ogp.me/ns#">
+
+    <head>
+
+        <title>Killer Game</title>
+
+        {% load static %}
+
+        <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="{% static 'myapp/css/supportTV.css' %}" />
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0,minimum-scale=1.0">
+
+    </head>
+
+    <body>
+
+        <header>
+            <img id="KillerGame" src="{% static 'myapp/img/KillerGame.svg' %}" alt="KillerGame">
+        </header>
+
+        <div class="top_part">
+            <img src="{% static 'myapp/img/top-part-blood.svg' %}" alt="top-part-blood" />
+        </div>
+
+        <p>Top 3 des Killers</p>
+        <div id="top3">
+            {% for killer in top3 %}
+                <div class="top3_Killer">
+                    {% if killer.state == "alive" %}
+                        <div class="top3_alive">
+                            <div class="top3_avatar_alive">
+                                <img class="top3_stillAlive" src="{% static 'myapp/img/avatar.svg' %}" alt="avatar" />
+                            </div>
+                            <div class="top3_player">
+                                <div class="top3_playerName">{{ killer.prenom }} {{ killer.nom }}</div>
+                                <div class="top3_playerPoints">{{ killer.points }} points</div>
+                            </div>
+                        </div>
+                    {% else %}
+                        <div class="top3_killed">
+                            <div class="top3_avatar_dead">
+                                <img class="top3_dead" src="{% static 'myapp/img/avatar-dead.svg' %}" alt="avatar-dead" />
+                            </div>
+                            <div class="player">
+                                <div class="top3_playerName">{{ killer.prenom }} {{ killer.nom }}</div>
+                                <div class="top3_playerPoints">{{ killer.points }} points (&eacute;limin&eacute;-e)</div>
+                            </div>
+                        </div>
+                    {% endif %}
+                </div>
+            {% empty %}
+                <div id="noplayer">Aucun utilisateur</div>
+            {% endfor %}
+        </div>
+
+        <p>Top 10 des Killers</p>
+        <div id="top10">
+            {% for killer in top10 %}
+                <div class="top10_Killer">
+                    {% if killer.state == "alive" %}
+                        <div class="alive">
+                            <div class="avatar_alive">
+                                <img class="stillAlive" src="{% static 'myapp/img/avatar.svg' %}" alt="avatar" />
+                            </div>
+                            <div class="player">
+                                <div class="playerName">{{ killer.prenom }} {{ killer.nom }}</div>
+                                <div class="playerPoints">{{ killer.points }} points</div>
+                            </div>
+                        </div>
+                    {% else %}
+                        <div class="killed">
+                            <div class="avatar_dead">
+                                <img class="dead" src="{% static 'myapp/img/avatar-dead.svg' %}" alt="avatar-dead" />
+                            </div>
+                            <div class="player">
+                                <div class="playerName">{{ killer.prenom }} {{ killer.nom }}</div>
+                                <div class="playerPoints">{{ killer.points }} points (&eacute;limin&eacute;-e)</div>
+                            </div>
+                        </div>
+                    {% endif %}
+                </div>
+            {% empty %}
+                <div id="noplayer">Aucun utilisateur</div>
+            {% endfor %}
+        </div>
+
+        <p>Top 20 des Killers</p>
+        <div id="top20">
+            {% for killer in top20 %}
+                <div class="top20_Killer">
+                    {% if killer.state == "alive" %}
+                        <div class="alive">
+                            <div class="avatar_alive">
+                                <img class="stillAlive" src="{% static 'myapp/img/avatar.svg' %}" alt="avatar" />
+                            </div>
+                            <div class="player">
+                                <div class="playerName">{{ killer.prenom }} {{ killer.nom }}</div>
+                                <div class="playerPoints">{{ killer.points }} points</div>
+                            </div>
+                        </div>
+                    {% else %}
+                        <div class="killed">
+                            <div class="avatar_dead">
+                                <img class="dead" src="{% static 'myapp/img/avatar-dead.svg' %}" alt="avatar-dead" />
+                            </div>
+                            <div class="player">
+                                <div class="playerName">{{ killer.prenom }} {{ killer.nom }}</div>
+                                <div class="playerPoints">{{ killer.points }} points (&eacute;limin&eacute;-e)</div>
+                            </div>
+                        </div>
+                    {% endif %}
+                </div>
+            {% empty %}
+                <div id="noplayer">Aucun utilisateur</div>
+            {% endfor %}
+        </div>
+
+        <p>Top 50 des Killers</p>
+        <div id="top50">
+            {% for killer in top50 %}
+                <div class="top50_Killer">
+                    {% if killer.state == "alive" %}
+                        <div class="alive">
+                            <div class="avatar_alive">
+                                <img class="top50stillAlive" src="{% static 'myapp/img/avatar.svg' %}" alt="avatar" />
+                            </div>
+                            <div class="player">
+                                <div class="playerName">{{ killer.prenom }} {{ killer.nom }}</div>
+                                <div class="playerPoints">{{ killer.points }} points</div>
+                            </div>
+                        </div>
+                    {% else %}
+                        <div class="killed">
+                            <div class="avatar_dead">
+                                <img class="top50dead" src="{% static 'myapp/img/avatar-dead.svg' %}" alt="avatar-dead" />
+                            </div>
+                            <div class="player">
+                                <div class="playerName">{{ killer.prenom }} {{ killer.nom }}</div>
+                                <div class="playerPoints">{{ killer.points }} points (&eacute;limin&eacute;-e)</div>
+                            </div>
+                        </div>
+                    {% endif %}
+                </div>
+            {% empty %}
+                <div id="noplayer">Aucun utilisateur</div>
+            {% endfor %}
+        </div>
+
+        <div class="bottom_part">
+            <img src="{% static 'myapp/img/bottom_part_blood.svg' %}" alt="bottom_part_blood" />
+        </div>
+
+    </body>
+</html>

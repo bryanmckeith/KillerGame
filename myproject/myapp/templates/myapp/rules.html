@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="fr" xmlns="http://www.w3.org/1999/xhtml" prefix="og: http://ogp.me/ns#">
+
+    <head>
+
+        <title>Killer Game</title>
+
+        {% load static %}
+
+        <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="{% static 'myapp/css/rules.css' %}" />
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0,minimum-scale=1.0">
+
+    </head>
+
+    <body>
+
+        <div id="notasmartphone">
+            <header>
+                <img id="KillerGame" src="{% static 'myapp/img/KillerGame.svg' %}" alt="KillerGame">
+            </header>
+
+            <div class="container">
+                <div class="top_part">
+                    <img src="{% static 'myapp/img/top-part-blood.svg' %}" alt="top-part-blood" />
+                </div>
+                <div class="medium_part_column">
+                    <div id="desktop">
+                        <p>S&eacute;rieusement ?</p>
+                        <img id="whatsApp" src="{% static 'myapp/img/whatsapp-logo-variant.svg' %}" alt="whatsapp-logo-variant">
+                        <p>Ce jeu se joue sur mobile, passez au responsive !</p>
+                    </div>
+                    <div id="paysage">
+                        <p>Oups...</p>
+                        <img id="rotate" src="{% static 'myapp/img/rotate-screen.svg' %}" alt="rotate-screen">
+                        <p>&Ccedil;a marche beaucoup mieux dans l'autre sens !</p>
+                    </div>
+                </div>
+                <div class="bottom_part">
+                    <img src="{% static 'myapp/img/bottom_part_blood.svg' %}" alt="bottom_part_blood" />
+                </div>
+
+            </div>
+        </div>
+
+        <div id="smartphone">
+
+            <header>
+                <img id="KillerGame" src="{% static 'myapp/img/KillerGame.svg' %}" alt="KillerGame">
+            </header>
+
+            <div class="container">
+
+                <div class="medium_part_column">
+
+                    <div class="intro">
+                        <div class="rulesTitle">
+                            Comment jouer ?
+                        </div>
+
+                        <div class="intro_text">
+                            Le "Killer Game", &eacute;galement appel&eacute; jeu de l'assassin, Gotcha, Killer ou parano&iuml;a, est un jeu de r&ocirc;le grandeur nature o&ugrave; le but des joueurs est de simuler l'assassinat d'autres joueurs.
+                            Le jeu est pr&eacute;vu pour induire une atmosph&egrave;re de parano&iuml;a, puisqu'une tentative d'assassinat peut se produire presque &agrave; n'importe quel moment.
+                            Ce jeu est g&eacute;n&eacute;ralement jou&eacute; dans les campus universitaires et parmi les communaut&eacute;s de lyc&eacute;ens.
+                            Les r&egrave;gles du jeu sont simples :
+                        </div>
+
+                         <div class="steps">
+
+                            <div class="step1">
+                                <img class="drop" src="{% static 'myapp/img/drop.svg' %}" alt="drop">
+                                <li>Tous les joueurs sont la cible d'un autre joueur, et ont &eacute;galement leur propre cible.</li>
+                            </div>
+                            <div class="step2">
+                                <img class="drop" src="{% static 'myapp/img/drop.svg' %}" alt="drop">
+                                <li>&agrave; n'importe quelle heure donn&eacute;e, un joueur a toujours une "cible" qu'il doit essayer de "tuer".</li>
+                            </div>
+                            <div class="step3">
+                                <img class="drop" src="{% static 'myapp/img/drop.svg' %}" alt="drop">
+                                <li>Les cibles sont assign&eacute;es par les organisateurs du jeu, et un joueur ignore toujours quelle personne a pour mission de "l'assassiner".</li>
+                            </div>
+                            <div class="step4">
+                                <img class="drop" src="{% static 'myapp/img/drop.svg' %}" alt="drop">
+                                <li>Les actions permettant de "tuer" une cible sont assign&eacute;es par les organisateurs du jeu, et un joueur ignore toujours quelle action l'am&eacute;nera &agrave; sa perte.</li>
+                            </div>
+                            <div class="step5">
+                                <img class="drop" src="{% static 'myapp/img/drop.svg' %}" alt="drop">
+                                <li>Pour &eacute;liminer la cible qui lui a &eacute;t&eacute; assign&eacute;e au hasard, un joueur doit faire r&eacute;aliser l'action qui lui a &eacute;t&eacute; assign&eacute;e &agrave; sa cible. Il ne s'agit donc pas de FAIRE, mais de FAIRE FAIRE.
+                                Par exemple: A doit tuer B. Pour cela A re&Ccedil;oit comme mission de faire dire &agrave; B : "J'adore le jeu du Killer !". S'il y arrive, A informe alors discr&egrave;tement B qu'il est mort.</li>
+                            </div>
+                            <div class="step6">
+                                <img class="drop" src="{% static 'myapp/img/drop.svg' %}" alt="drop">
+                                <li>Lorsqu'un joueur se fait &eacute;liminer, il garde le silence et ne se d&eacute;clare pas mort. Il donne tout simplement le code qui lui a &eacute;t&eacute; envoy&eacute; par SMS &agrave; son assassin. La partie est alors termin&eacute;e pour lui.</li>
+                            </div>
+                            <div class="step7">
+                                <img class="drop" src="{% static 'myapp/img/drop.svg' %}" alt="drop">
+                                <li>Lorsqu'un joueur a &eacute;limin&eacute; sa cible, il note le code de sa victime et enregistre son crime via le formulaire d&eacute;di&eacute;. Une nouvelle mission lui sera alors confi&eacute;e par SMS.</li>
+                            </div>
+                            <div class="step8">
+                                <img class="drop" src="{% static 'myapp/img/drop.svg' %}" alt="drop">
+                                <li>Lorsqu'un joueur a &eacute;limin&eacute; sa cible, il gagne des points qui lui permettent de progresser dans le classement.
+                                Le nombre de points gagn&eacute;s correspond au nombre de points accumul&eacute;s par sa victime.
+                                Tous les joueurs d&eacute;marrent la partie avec 10 points.
+                                Par exemple : C doit tuer D. D a d&eacute;j&agrave; tu&eacute; B qui avait tu&eacute; A qui n'avait tu&eacute; personne. D a donc cumul&eacute; 30 points. C de son c&ocirc;t&eacute; a d&eacute;j&agrave; tu&eacute; E. Il a 20 points. S'il parvient &agrave; tuer D, il aura alors 50 points.</li>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <footer>
+                    <div class="to_homepage" onclick="self.location.href='home.html'">
+                        <div class="icone1">
+                            <img src="{% static 'myapp/img/picto-home.svg' %}" alt="picto-home" />
+                        </div>
+                        ACCUEIL
+                    </div>
+                    <div class="to_rulespage" onclick="self.location.href='rules.html'">
+                        <div class="icone2">
+                            <img src="{% static 'myapp/img/picto-rules-white.svg' %}" alt="picto-rules-white" />
+                        </div>
+                        REGLES
+                    </div>
+                    <div class="to_ranking" onclick="self.location.href='ranking.html'">
+                        <div class="icone3">
+                            <img src="{% static 'myapp/img/picto-ranking.svg' %}" alt="picto-ranking" />
+                        </div>
+                        CLASSEMENT
+                    </div>
+            </footer>
+
+        </div>
+
+    </body>
+</html>

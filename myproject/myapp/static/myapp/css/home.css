@@ -1,0 +1,312 @@
+/* ____________________ CSS Document ____________________ */
+
+/* ==================== For Desktop ==================== */
+
+@media (min-width: 768px) {
+
+    body {
+        height: 100%;
+        background-color: #000000;
+        color: #ffe100;
+        font-family: 'Source Sans Pro', sans-serif;
+        font-size: 50px;
+        text-align: center;
+    }
+
+    #smartphone {
+        display: none;
+    }
+
+    #notasmartphone {
+        height: 100%;
+    }
+
+        .top_part {
+           position: absolute;
+            left: 0;
+            top: 0;
+        }
+
+        .container {
+                margin-top: 175px;
+        }
+
+        #paysage {
+            display: none;
+        }
+
+        #whatsApp {
+            height: 90px;
+        }
+
+        .bottom_part {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+        }
+
+}
+
+/* ==================== For smartphones in landscape mode ==================== */
+
+@media (min-width: 481px) and (max-width: 767px) {
+
+    body {
+        height: 100%;
+        background-color: #000000;
+        color: #ffe100;
+        font-family: 'Source Sans Pro', sans-serif;
+        font-size: 26px;
+        text-align: center;
+    }
+
+    #smartphone {
+        display: none;
+    }
+
+    #notasmartphone {
+        height: 100%;
+    }
+
+        .top_part {
+           position: absolute;
+            left: 0;
+            top: 0;
+        }
+
+        #small_size_logo {
+            height: 50px;
+            z-index: 1;
+            position: relative;
+        }
+
+        #desktop {
+            display: none;
+        }
+
+        #rotate {
+            height: 90px;
+        }
+
+        .medium_part_column {
+            position: relative;
+            z-index: 1;
+        }
+
+        .bottom_part {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+        }
+
+}
+
+/* ==================== For smartphones ==================== */
+/*
+    ##Device = Most of the Smartphones Mobiles (Portrait)
+    ##Screen = B/w 320px to 479px
+*/
+
+@media (min-width: 320px) and (max-width: 480px) {
+
+    #notasmartphone {
+        display: none;
+    }
+
+    /* ____________________ Body + Header ____________________ */
+
+    body {
+        background-color: #000000;
+        font-family: 'Source Sans Pro', sans-serif;
+    }
+
+    .container {
+        display: flex;
+        flex-direction: column;
+    }
+
+
+    /* ____________________ Top part ____________________ */
+
+    .top_part {
+        display: flex;
+        flex-direction: column;
+    }
+
+        .top_part_blood {
+            position: fixed;
+            top: 0;
+            left: 0;
+        }
+
+        .KillerGame {
+            position: absolute;
+            align-self: center;
+            padding-top: 20px;
+        }
+
+        .victim {
+            position: absolute;
+            align-self: center;
+            padding-top: 133px;
+        }
+
+    /* ____________________ Medium part ____________________ */
+
+    .medium_part_column {
+        order: 2;
+        position: relative;
+        top: 225px;
+        line-height: 1.4;
+        letter-spacing: normal;
+        text-align: center;
+        color: #ffffff;
+        /* Bug-001 iPhone 6S screens
+        margin-bottom: 74px;
+        padding-bottom: 10px;*/
+        margin-bottom: 150px;
+        padding-bottom: 150px;
+    }
+
+		.message_title {
+			font-size: 24px;
+			font-weight: bold;
+			line-height: 0.88;
+		}
+
+		.message_text {
+			font-size: 18px;
+			font-weight: 600;
+		}
+
+    /* ____________________ Form ____________________ */
+
+    p {
+        -webkit-margin-after: 0;
+        position: relative;
+        z-index: 1;
+    }
+	
+    a {
+        color: #ffe100;
+    }
+
+    input {
+        width: 300px;
+        height: 50px;
+        border: 0;
+        border-radius: 4px;
+        background-color: #ffffff;
+        text-indent: 24px;
+        text-align: left;
+        font-size: 18px;
+        font-size: 18px;
+        font-weight: normal;
+        font-style: normal;
+        font-stretch: normal;
+        line-height: 0.94;
+        letter-spacing: normal;
+    }
+
+    input::placeholder {
+        width: 141px;
+        height: 17px;
+        color: #999999;
+    }
+
+
+    button {
+        background-color: #ffe100;
+        font-size: 18px;
+        font-weight: 600;
+        color:  #000000;
+        width: 300px;
+        height: 50px;
+        border: 0;
+        border-radius: 4px;
+        padding: 1.084rem 1.25rem;
+        margin-top: 20px;
+        position: relative;
+        z-index: 1;
+    }
+
+    /* ____________________ Bottom part ____________________ */
+
+	.bottom_part {
+        font-size: 18px;
+        font-weight: 600;
+        -webkit-margin-before: 25px;
+        position: relative;
+        z-index: 1;
+    }
+	
+		.bottom_part_blood {
+			position: fixed;
+			bottom: 0;
+			right: 0;
+			z-index: 0;
+		}
+
+    /* ____________________ Tap Barre ____________________ */
+
+    footer {
+        background-color: #ffe100;
+        position: fixed;
+        display: flex;
+        flex-direction: row;
+        height: 74px;
+        width: 100%;
+        bottom: 0;
+        margin-left: -8px;
+        z-index: 2;
+    }
+
+        .to_homepage {
+            order: 1;
+            flex-grow: 1;
+            width: 37px;
+            height: 13px;
+            font-size: 10px;
+            font-weight: 600;
+            font-style: normal;
+            font-stretch: normal;
+            line-height: normal;
+            letter-spacing: normal;
+            text-align: center;
+            color: #000000;
+        }
+        .to_rulespage {
+            order: 2;
+            flex-grow: 1;
+            width: 34px;
+            height: 13px;
+            font-size: 10px;
+            font-weight: 600;
+            font-style: normal;
+            font-stretch: normal;
+            line-height: normal;
+            letter-spacing: normal;
+            text-align: center;
+            color: #000000;
+        }
+        .to_ranking{
+            order: 3;
+            flex-grow: 1;
+            width: 58px;
+            height: 13px;
+            font-size: 10px;
+            font-weight: 600;
+            font-style: normal;
+            font-stretch: normal;
+            line-height: normal;
+            letter-spacing: normal;
+            text-align: center;
+            color: #000000;
+        }
+
+    .icone1, .icone2, .icone3 {
+        display: block;
+        padding-top: 14px;
+    }
+
+}

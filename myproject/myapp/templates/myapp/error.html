@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="fr" xmlns="http://www.w3.org/1999/xhtml" prefix="og: http://ogp.me/ns#">
+
+    <head>
+
+        <title>Killer Game</title>
+
+        {% load static %}
+
+        <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="{% static 'myapp/css/error.css' %}" />
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0,minimum-scale=1.0">
+
+    </head>
+
+    <body>
+
+        <div class="container">
+            <div class="top_part">
+                <div class="top_part_blood">
+                    <img src="{% static 'myapp/img/top-part-blood.svg' %}" alt="top-part-blood" />
+                </div>
+                <div class="KillerGame">
+                    <img src="{% static 'myapp/img/KillerGame.svg' %}" alt="KillerGame" />
+                </div>
+            </div>
+
+            <div class="medium_part_column">
+
+                <div class="intro">
+                    <div class="message_title">
+                        Oups !
+                    </div>
+                    <div class="message_text">
+                        {{message}}
+                    </div>
+                </div>
+
+                <div class="bottom_part">
+					<button onclick="self.location.href='home.html'">
+						Retour
+					</button>
+                </div>
+
+                <div class="bottom_part_blood">
+                    <img src="{% static 'myapp/img/bottom_part_blood.svg' %}" alt="blood" />
+                </div>
+
+            </div>
+        </div>
+
+        <footer>
+            <div class="to_homepage" onclick="self.location.href='home.html'">
+                <div class="icone1">
+                    <img src="{% static 'myapp/img/picto-home.svg' %}" alt="picto-home" />
+                </div>
+                ACCUEIL
+            </div>
+            <div class="to_rulespage" onclick="self.location.href='rules.html'">
+                <div class="icone2">
+                    <img src="{% static 'myapp/img/picto-rules.svg' %}" alt="picto-rules" />
+                </div>
+                REGLES
+            </div>
+            <div class="to_ranking" onclick="self.location.href='ranking.html'">
+                <div class="icone3">
+                    <img src="{% static 'myapp/img/picto-ranking.svg' %}" alt="picto-ranking" />
+                </div>
+                CLASSEMENT
+            </div>
+        </footer>
+
+    </body>
+</html>

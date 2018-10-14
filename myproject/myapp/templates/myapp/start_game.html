@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="fr" xmlns="http://www.w3.org/1999/xhtml" prefix="og: http://ogp.me/ns#">
+
+    <head>
+
+		<title>Killer Game</title>
+		{% load static %}
+        <meta name="viewport" content="width=device-width, initial-scale=1.0,minimum-scale=1.0">
+
+    </head>
+
+    <body>
+
+        <h1>Killer Game</h1>
+
+		<form action="{% url "Game Starter Page" %}" method="post">
+			{% csrf_token %}
+			{{ form.as_p }}
+			<button>
+				Lancer la partie !
+			</button>
+		</form>
+
+    </body>
+	
+</html>

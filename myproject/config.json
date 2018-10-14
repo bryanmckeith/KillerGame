@@ -1,0 +1,14 @@
+{
+    "SMS":
+    {
+		"username":"<YOUR_USERNAME>",
+		"password":"<YOUR_PASSWORD>",
+		"accountReference":"<YOUR_ACCOUNT_REFERENCE>",
+		"expeditor":"Killer Game"
+    },
+    "Slack":
+    {
+		"token":"<YOUR_SLACK_API_TOKEN>",
+        "channel":"<YOUR_CHANNEL>"
+    }
+}

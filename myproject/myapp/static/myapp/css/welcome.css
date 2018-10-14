@@ -1,0 +1,59 @@
+/* ____________________ CSS Document ____________________ */
+
+/* ==================== For all ==================== */
+
+    /* ____________________ Body + Header ____________________ */
+
+    body {
+        background-color: #ffe100;
+        font-family: 'Source Sans Pro', sans-serif;
+    }
+
+    .close {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+    }
+
+    .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        -webkit-margin-before: 101px;
+    }
+
+    .welcome_text {
+        -webkit-margin-before: 37px;
+        -webkit-margin-after: 121px;
+        font-size: 18px;
+        font-weight: 600;
+        line-height: 1.17;
+    }
+
+        #bravo {
+            font-size: 28px;
+        }
+
+        #whats_next {
+            text-align: justify;
+            -webkit-margin-before: 35px;
+            margin-left: 10px;
+            margin-right: 10px;
+        }
+
+    button {
+        background-color: #ffe100;
+        font-size: 18px;
+        font-weight: 600;
+        color: white;
+        width: 300px;
+        height: 50px;
+        border-radius: 4px;
+        padding: 1.084rem 1.25rem;
+        margin-top: 20px;
+        position: relative;
+        z-index: 1;
+        border-color: white;
+        border-style: solid;
+    }
