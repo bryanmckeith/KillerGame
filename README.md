@@ -43,13 +43,14 @@ Among potential new features :
 ### Rules and screenshots
 
 ![alt text](https://github.com/bryanmckeith/KillerGame/blob/master/home-screenshot.png)
+![alt text](https://github.com/bryanmckeith/KillerGame/blob/master/ranking-srceenshot.png)
+![alt text](https://github.com/bryanmckeith/KillerGame/blob/master/SMS-screenshot.png)
+
 Every player should subscribe via the dedicated page. Players will need to give Firstname, Name, Phone number and a pseudo.
 
 Once everyone has subscribed, the admin will need to start game via start_game page. When it's done, every player receives a SMS message on his/her smartphone to tell him/her who his/her target is, and what action to perform as a murder as well as a personal secret code.
-![alt text](https://github.com/bryanmckeith/KillerGame/blob/master/SMS-screenshot.png)
 
-Every player can see the game's ranking :
-![alt text](https://github.com/bryanmckeith/KillerGame/blob/master/ranking-srceenshot.png)
+Every player can see the game's ranking.
 
 ## Contributing
 
