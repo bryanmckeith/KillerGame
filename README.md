@@ -42,7 +42,9 @@ Among potential new features :
 
 ### Rules and screenshots
 
-<Todo>
+![alt text](https://github.com/bryanmckeith/KillerGame/blob/master/home-screenshot.png)
+![alt text](https://github.com/bryanmckeith/KillerGame/blob/master/ranking-screenshot.png)
+![alt text](https://github.com/bryanmckeith/KillerGame/blob/master/SMS-screenshot.png)
 
 ## Contributing
 
